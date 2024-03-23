@@ -1,4 +1,14 @@
+<p align="center">
+  <img src="https://github.com/pheeca/GenCode/blob/main/Content/Logo Files/For Web/png/Color logo - no background.png" alt="GenCode" width="150"/>
+</p>
+
 # GenCode
+
+[![AppVeyor](https://ci.appveyor.com/api/projects/status/l3kmfu18f4fbmuvu?svg=true)](https://ci.appveyor.com/project/pheeca/GenCode)
+[![GitHub release](https://badge.fury.io/gh/pheeca%2FGenCode.svg)](https://github.com/pheeca/GenCode/releases/tag/v0.0.0-alpha)
+[![NuGet package](https://badge.fury.io/nu/GenCode.svg)](https://www.nuget.org/packages/GenCode/)
+[![NuGet](https://img.shields.io/nuget/dt/GenCode.svg)](https://www.nuget.org/packages/GenCode/)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/pheeca/GenCode/blob/main/CONTRIBUTING.md)
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
