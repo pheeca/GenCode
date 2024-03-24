@@ -6,21 +6,19 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>GenCode</Title>
-    <Version>$(VersionPrefix)</Version>
+    <Version>1.0.1</Version>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/pheeca/GenCode</RepositoryUrl>
     <Copyright> MIT License</Copyright>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
-    <Description>Note: Not usable at the moment, Avoid usage
-
-The GenCode library is a powerful tool for incorporating advanced language modeling capabilities into your .NET applications. With its easy-to-use API and seamless integration process, this package empowers developers to harness the full potential of natural language processing within their projects. The library supports various language tasks, including text generation, sentiment analysis, and more, and is continuously updated with new features and improvements. Comprehensive documentation and examples are available to facilitate rapid integration and adoption.</Description>
+    <Description>The GenCode library is a powerful tool for incorporating advanced language modeling capabilities into your .NET applications. With its easy-to-use API and seamless integration process, this package empowers developers to harness the full potential of natural language processing within their projects. The library supports various language tasks, including text generation, sentiment analysis, and more, and is continuously updated with new features and improvements. Comprehensive documentation and examples are available to facilitate rapid integration and adoption.</Description>
     <PackageIcon>browser.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>Alpha-Initial code-Not To Be Used</PackageReleaseNotes>
-    <PackageTags>dotnet;library;utility;open-source;cross-platform;data;ai;natural-language-processing;text-analytics;sentiment-analysis;</PackageTags>
+    <PackageReleaseNotes>Initial code</PackageReleaseNotes>
+    <PackageTags>dotnet;library;utility;open-source;cross-platform;data;ai;natural-language-processing;text-analytics;sentiment-analysis;LLM;CSharp;C#;Deepinfra</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <AssemblyVersion>0.0.0.0</AssemblyVersion>
-    <FileVersion>0.0.0.0</FileVersion>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
+    <FileVersion>1.0.1</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -39,7 +37,8 @@ The GenCode library is a powerful tool for incorporating advanced language model
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OpenAI" Version="1.11.0" />
+    <PackageReference Include="Betalgo.OpenAI" Version="7.4.6" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
 </Project>

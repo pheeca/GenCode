@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenCode", "GenCode\GenCode.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenCode.Tests", "GenCode.Tests\GenCode.Tests.csproj", "{67AC3F59-7065-42D0-82DB-EEF126A8B174}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenCode.ConsoleApp", "GenCode.ConsoleApp\GenCode.ConsoleApp.csproj", "{5B6D2A1B-DDA9-4730-87B7-50229164EC3F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{67AC3F59-7065-42D0-82DB-EEF126A8B174}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67AC3F59-7065-42D0-82DB-EEF126A8B174}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67AC3F59-7065-42D0-82DB-EEF126A8B174}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B6D2A1B-DDA9-4730-87B7-50229164EC3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B6D2A1B-DDA9-4730-87B7-50229164EC3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B6D2A1B-DDA9-4730-87B7-50229164EC3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B6D2A1B-DDA9-4730-87B7-50229164EC3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
