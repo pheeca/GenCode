@@ -12,6 +12,16 @@ internal class Program
 {
     private static async Task Main(string[] args)
     {
+
+
+        condition();
+
+
+        //Obj()
+        //List();
+    }
+    private static void Obj()
+    {
         //// Story 1
         //var story1 = new Story
         //{
@@ -24,7 +34,6 @@ internal class Program
         //var gencode = new GenCode.GenCode(Environment.GetEnvironmentVariable("DefaultLLM_API_KEY"));
         //Story result = gencode.FillObject<Story>("Update Description to be more datailed", story1).Result;
         //Console.WriteLine(result.Description);
-
 
         //string apiKey = Environment.GetEnvironmentVariable("DefaultLLM_API_KEY");
 
@@ -40,7 +49,9 @@ internal class Program
         //var gencode = new GenCode.GenCode(apiKey);
         //Story result = gencode.FillObject<Story>("how are you feeling", story1).Result;
 
-
+    }
+    private static void List()
+    {
         // Story 1
         var story1 = new Story
         {
@@ -58,13 +69,31 @@ internal class Program
             CreatedAt = DateTime.Now.AddDays(-70),
             UpdatedAt = DateTime.Now.AddDays(-13)
         };
-        var stories = new List<Story>() { story1 , story2 };
+        var stories = new List<Story>() { story1, story2 };
         var gencode = new GenCode.GenCode(Environment.GetEnvironmentVariable("DefaultLLM_API_KEY"));
         List<Story> result = gencode.FillCollection<Story>("Update Description to be more datailed", stories.AsEnumerable()).Result.ToList();
         foreach (var resultItem in result)
         {
             Console.WriteLine(resultItem.Description);
         }
+    }
 
+    private static void condition()
+    {
+        // Story 1
+        var story1 = new Story
+        {
+            Id = 1,
+            Title = "The Lost Treasure",
+            Description = "A group of adventurers embarks on a journey to find a lost treasure hidden deep within a mysterious jungle.",
+            CreatedAt = DateTime.Now.AddDays(-30),
+            UpdatedAt = DateTime.Now.AddDays(-15)
+        };
+        var gencode = new GenCode.GenCode(Environment.GetEnvironmentVariable("DefaultLLM_API_KEY"));
+        //bool? result = gencode.IsObject<Story>("Is this story correct?", story1).Result;
+        //Console.WriteLine(result);
+
+        bool? result2 = gencode.Is("Does sun rise from east?").Result;
+        Console.WriteLine(result2);
     }
 }

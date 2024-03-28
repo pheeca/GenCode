@@ -6,19 +6,20 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>GenCode</Title>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/pheeca/GenCode</RepositoryUrl>
     <Copyright> MIT License</Copyright>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
-    <Description>The GenCode library is a powerful tool for incorporating advanced language modeling capabilities into your .NET applications. With its easy-to-use API and seamless integration process, this package empowers developers to harness the full potential of natural language processing within their projects. The library supports various language tasks, including text generation, sentiment analysis, and more, and is continuously updated with new features and improvements. Comprehensive documentation and examples are available to facilitate rapid integration and adoption.</Description>
+    <Description>The GenCode library is a first-of-its-kind powerful ORM for LLM like GPT4 for incorporating advanced artificial intelligence capabilities, particularly in natural language processing, into your .NET applications. With a seamless integration process, this package empowers developers to harness the full potential of AI within their projects, much like how a traditional ORM simplifies database interactions. With its easy-to-use API and seamless integration process, this package empowers developers to harness the full potential of natural language processing within their projects. The library supports various language tasks, including text generation, sentiment analysis, and more, and is continuously updated with new features and improvements. Comprehensive documentation and examples are available to facilitate rapid integration and adoption.</Description>
     <PackageIcon>browser.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>Initial code</PackageReleaseNotes>
-    <PackageTags>dotnet;library;utility;open-source;cross-platform;data;ai;natural-language-processing;text-analytics;sentiment-analysis;LLM;CSharp;C#;Deepinfra</PackageTags>
+    <PackageReleaseNotes>-Basic features all working
+-Basic condition support</PackageReleaseNotes>
+    <PackageTags>ORM;GPT4;text-generation;improvement;artificial-intelligence;dotnet;library;utility;open-source;cross-platform;data;ai;natural-language-processing;NLP;text-analytics;sentiment-analysis;LLM;CSharp;C#;Deepinfra;AI-adaptability; AI-benefits; AI-effectiveness; AI-efficiency; AI-flexibility; AI-implementation; AI-innovation; AI-integration; AI-response-management; AI-scalability-management; AI-transformation; AI-value; automation; developer-tools; framework; innovation; productivity; programming; technology</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <AssemblyVersion>1.0.1</AssemblyVersion>
-    <FileVersion>1.0.1</FileVersion>
+    <AssemblyVersion>1.0.2</AssemblyVersion>
+    <FileVersion>1.0.2</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

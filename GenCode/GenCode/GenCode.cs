@@ -67,14 +67,78 @@ namespace GenCode
             return ret;
         }
         /// <summary>
+        /// Generates a response from the OpenAI API based on user input.
+        /// </summary>
+        /// <param name="userMessage">The user's input message.</param>
+        /// <returns>A boolean indicating whether the response was successfully filled, or null if no response is received.</returns>
+        public async Task<bool?> Is(string userMessage)
+        {
+            var completionResult = await api.ChatCompletion.CreateCompletion(new ChatCompletionCreateRequest
+            {
+                Messages = new List<ChatMessage>
+                                {
+                                    ChatMessage.FromSystem("Note:In case of no modification, return Empty Response;Context: You are acting as API that only returns a JSON response with only true or false. The root of the JSON response should be only and only boolean."),
+                                    ChatMessage.FromUser(userMessage)
+                                },
+                Model = Model,
+                //MaxTokens = 50//optional
+            });
+
+            if (completionResult.Successful)
+            {
+                if (string.IsNullOrWhiteSpace(completionResult.Choices.First().Message.Content))
+                {
+                    return null;
+                }
+                var apiResponseAsJson = (completionResult.Choices.First().Message.Content.Trim().ToLowerInvariant() ?? "false") == "true";
+                return apiResponseAsJson;
+            }
+            return null;
+        }
+
+        /// <summary>
         /// Generates a response from the OpenAI API based on user input, object properties.
         /// </summary>
         /// <typeparam name="TObject">The type of the object containing properties to be used in the request.</typeparam>
         /// <param name="userMessage">The user's input message.</param>
         /// <param name="obj">The object containing properties to be used in the request.</param>        
-        /// <returns>A <see cref="ChatResult"/> containing the generated response.</returns>
+        /// <returns>A boolean indicating whether the response was successfully filled.</returns>
+        public async Task<bool?> IsObject<TObject>(string userMessage, TObject obj)
+    {
+            // Perform any necessary actions based on the input parameters (obj and collection)
+            // For example, you can serialize the object and collection properties and include them in the chat message.
+            var completionResult = await api.ChatCompletion.CreateCompletion(new ChatCompletionCreateRequest
+            {
+                Messages = new List<ChatMessage>
+            {
+                ChatMessage.FromSystem("Note:Incase of no modification return Empty Response;Context: You are acting as API that only returns a JSON response with only true or false. the root of the JSON response should by only and only boolean. The json to be serialized as C# class with properties "+Construct<TObject>(false)+"\n\n"+ Newtonsoft.Json.JsonConvert.SerializeObject(obj)),
+                ChatMessage.FromUser(userMessage)
+            },
+                Model = Model,
+                //MaxTokens = 50//optional
+            });
 
-        public async Task<TObject> FillObject<TObject>(string userMessage, TObject obj)
+            if (completionResult.Successful)
+            {
+                if (string.IsNullOrWhiteSpace(completionResult.Choices.First().Message.Content))
+                {
+                    return null;
+                }
+                var apiResponseAsJson = (completionResult.Choices.First().Message.Content.Trim().ToLowerInvariant() ?? "false")=="true";
+                return apiResponseAsJson;
+            }
+            return null;
+    }
+
+    /// <summary>
+    /// Generates a response from the OpenAI API based on user input, object properties.
+    /// </summary>
+    /// <typeparam name="TObject">The type of the object containing properties to be used in the request.</typeparam>
+    /// <param name="userMessage">The user's input message.</param>
+    /// <param name="obj">The object containing properties to be used in the request.</param>        
+    /// <returns>A <see cref="ChatResult"/> containing the generated response.</returns>
+
+    public async Task<TObject> FillObject<TObject>(string userMessage, TObject obj)
         {
             // Perform any necessary actions based on the input parameters (obj and collection)
             // For example, you can serialize the object and collection properties and include them in the chat message.
